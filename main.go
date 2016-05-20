@@ -1,16 +1,21 @@
 package main
 
-import "github.com/gin-gonic/gin"
-import "net/http"
+import (
+	"github.com/gin-gonic/gin"
+	"net/http"
+)
 
 func main() {
 	// Creates a gin router with default middleware:
 	// logger and recovery (crash-free) middleware
 
 	router := gin.Default()
+
 	router.LoadHTMLGlob("files/*")
 
 	router.GET("/", mpage)
+	router.GET("/business_reg", showbusregpage)
+	router.POST("/business_reg/check")
 
 	// By default it serves on :8080 unless a
 	// PORT environment variable was defined.
@@ -25,8 +30,6 @@ func main() {
 
 func mpage(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", gin.H{
-		"title": "Main website",
+		"title": "Главная страница",
 	})
 }
-
-func re
