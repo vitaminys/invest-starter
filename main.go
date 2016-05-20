@@ -6,7 +6,7 @@ import "net/http"
 func main() {
 	// Creates a gin router with default middleware:
 	// logger and recovery (crash-free) middleware
-	
+
 	router := gin.Default()
 	router.LoadHTMLGlob("files/*")
 
@@ -28,3 +28,5 @@ func mpage(c *gin.Context) {
 		"title": "Main website",
 	})
 }
+
+func re
