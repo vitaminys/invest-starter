@@ -1,4 +1,3 @@
-{{ define "index.html" }}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ .title }}</title>
+    <title>InvestStarter</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/clean-template.css" rel="stylesheet">
@@ -21,22 +20,18 @@
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="index.html">{{ .title }}</a>
+                <a class="navbar-brand" href="index.html">InvestStarter</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/">Главная</a>
+                        <a href="index.html">Главная</a>
                     </li>
                     <li>
                         <a href="profile_business.html">Мой профиль</a>
                     </li>
                     <li>
-<<<<<<< HEAD
                         <a href="register_business.html">Вход</a>
-=======
-                        <a href="/business_reg">Вход</a>
->>>>>>> 8f803ac07cbfae2018363230498f334324b27d00
                     </li>
                 </ul>
             </div>
@@ -49,9 +44,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>{{ .name }}</h1>
+                        <h1>InvestStarter</h1>
                         <hr class="small">
-                        <span class="subheading">Деньги для малого бизнеса</span>
+                        <span class="subheading">Инвестиции малому бизнесу</span>
                     </div>
                 </div>
             </div>
@@ -62,25 +57,80 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8-custom">
+				<hr class="firmSeparator">
                 <div class="post-preview">
-					<div class="firmName"></div>
-					<div class="firmRefs"></div>
-					<div class="firmDesc"></div>
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay1" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
 				</div>
-                <hr>
+                <hr class="firmSeparator">
                 <div class="post-preview">
-                    <a href="post.html">
-					   <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay2" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
+				</div><hr class="firmSeparator">
+                <div class="post-preview">
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay3" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
+				</div><hr class="firmSeparator">
+                <div class="post-preview">
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay4" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
 				</div>
-				
-                <hr>
+				<hr class="firmSeparator">
+				<div class="post-preview">
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay5" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
+				</div>
+				<hr class="firmSeparator">
                 <!-- Pager -->
 				<!--
                 <ul class="pager">
@@ -92,12 +142,13 @@
             </div>
         </div>
     </div>
-
+	
 	<hr>
-
+	
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/clean-blog.min.js"></script>
+	<script src="js/"
 </body>
+
 </html>
-{{ end }}

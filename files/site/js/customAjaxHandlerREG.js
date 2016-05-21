@@ -13,12 +13,12 @@ $( "#businessRegisterForm" ).submit(function(event) {
 	
   var posting = $.post( urlI, { name: nameI, type: typeI, city: cityI, industry: industryI, description: descriptionI, email: emailI, password: passwordI})
   .always(function() {
-	alert("Finish");
+	
   })
   .done(function() {
-    alert("done");
+	
   })
   .fail(function() {
-    alert("error");
+	
   });
 });

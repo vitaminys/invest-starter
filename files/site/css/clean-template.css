@@ -134,13 +134,13 @@ hr.small {
 }
 .intro-header {
   background-color: #D84B20;
-  background: no-repeat center center;
+  background: no-repeat center top;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
@@ -152,7 +152,7 @@ hr.small {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 150px 0;
+    padding: 50px;
   }
 }
 .intro-header .site-heading,
@@ -210,6 +210,57 @@ hr.small {
     font-size: 30px;
   }
 }
+.firmLeft {
+	width: 49%;
+	height: 100%;
+	display: table-cell;
+	margin: 0%;
+	overflow: auto;
+	vertical-align: top;
+	text-align: center;
+}
+.firmRight {
+	width: 49%;
+	height: 100%;
+	display: table-cell;
+	margin: 0%;
+	padding-left: 2%;
+	overflow: auto;
+	vertical-align: top;
+}
+.firmRightTop {
+	width: 100%;
+	overflow: auto;
+}
+.firmRightBottom {
+	width: 100%;
+	overflow: auto;
+}
+.firmDesc, .firmRefs {
+	font-family: 'Times New Roman', serif !important;
+	font-size: 85% !important;
+}
+.firmName {
+	margin: 1% 0% 1% 0%;
+}
+.firmDesc {
+	margin: 1% 0% 1% 0%;
+}
+.firmRefs {
+	margin: 1% 0% 1% 0%;
+}
+.firmRefs button {
+	float: right;
+}
+.firmSeparator {
+	border-top: 0px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.post-preview {
+	height: 100%;
+	overflow: auto;
+}
 .post-preview > a {
   color: #404040;
 }
@@ -247,14 +298,6 @@ hr.small {
   .post-preview > a > .post-title {
     font-size: 36px;
   }
-}
-.firmCard {
-	border: 1px solid #BC5D58;
-	border-collapse: collapse;
-}
-.firmCard td {
-	border: 1px solid #BC5D58;
-	border-collapse: collapse;
 }
 .section-heading {
   font-size: 36px;
