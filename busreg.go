@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/boltdb/bolt"
-	"github.com/gin-gonic/gin"
 	"encoding/binary"
 	"encoding/json"
+	"github.com/boltdb/bolt"
+	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 	"time"
@@ -33,7 +33,7 @@ type BusinessForm struct {
 }
 
 func showbusregpage(c *gin.Context) {
-	c.HTML(http.StatusOK, "index.html", gin.H{
+	c.HTML(http.StatusOK, "contact.html", gin.H{
 		"title": "Регистрация бизнеса",
 	})
 }

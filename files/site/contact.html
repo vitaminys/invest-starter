@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>InvestStarter</title>
+    <title>{{ .Title }}</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/clean-template.css" rel="stylesheet">
@@ -20,7 +20,7 @@
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="index.html">InvestStarter</a>
+                <a class="navbar-brand" href="index.html">{{ .Title }}</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>InvestStarter</h1>
+                        <h1>{{ .Title }}</h1>
                         <hr class="small">
                         <span class="subheading">Деньги для малого бизнеса</span>
                     </div>
@@ -52,7 +52,7 @@
             </div>
         </div>
     </header>
-	
+
     <!-- Main Content -->
     <div class="container">
         <div class="row">
@@ -119,7 +119,7 @@
             </div>
         </div>
     </div>
-	
+
     <hr>
 
     <script src="js/jquery.min.js"></script>
