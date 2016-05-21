@@ -1,3 +1,4 @@
+{{ define "register_business.html" }}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
     <title>InvestStarter</title>
+=======
+    <title>{{ .title }} | {{ .name }}</title>
+>>>>>>> 7639a3c24a275e7e4eb6b4c2ea9c7a5800eb6dab
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/clean-template.css" rel="stylesheet">
@@ -20,7 +25,11 @@
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header page-scroll">
+<<<<<<< HEAD
                 <a class="navbar-brand" href="index.html">InvestStarter</a>
+=======
+                <a class="navbar-brand" href="index.html">{{ .title }}</a>
+>>>>>>> 7639a3c24a275e7e4eb6b4c2ea9c7a5800eb6dab
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -28,10 +37,14 @@
                         <a href="index.html">Главная</a>
                     </li>
                     <li>
-                        <a href="profile_business.html">Мой профиль</a>
+                        <a href="/business-profile">Мой профиль</a>
                     </li>
                     <li>
+<<<<<<< HEAD
                         <a href="register_business.html">Вход</a>
+=======
+                        <a href="/business-reg">Вход</a>
+>>>>>>> 7639a3c24a275e7e4eb6b4c2ea9c7a5800eb6dab
                     </li>
                 </ul>
             </div>
@@ -44,7 +57,11 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
+<<<<<<< HEAD
                         <h1>InvestStarter</h1>
+=======
+                        <h1>{{ .name }}</h1>
+>>>>>>> 7639a3c24a275e7e4eb6b4c2ea9c7a5800eb6dab
                         <hr class="small">
                         <span class="subheading">Инвестиции малому бизнесу</span>
                     </div>
@@ -57,8 +74,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<<<<<<< HEAD
                 <p>Регистрация бизнеса</p>
                 <form id="businessRegisterForm" action="/business_reg/check">	<!-- INSERT ACTION !!! -->
+=======
+                <p>Форма регистрации</p>
+                <form id="businessRegisterForm" action="/business-reg/check" method="post">	<!-- INSERT ACTION !!! -->
+>>>>>>> 7639a3c24a275e7e4eb6b4c2ea9c7a5800eb6dab
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label style="font-family: 'Times New Roman', serif;">Наименование:</label>
@@ -129,3 +151,4 @@
 </body>
 
 </html>
+{{ end }}

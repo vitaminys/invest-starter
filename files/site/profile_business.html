@@ -1,3 +1,4 @@
+{{ define "profile_business.html" }}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>InvestStarter</title>
+    <title>{{ .title }} | {{ .name }}</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/clean-template.css" rel="stylesheet">
@@ -29,20 +30,20 @@
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="index.html">InvestStarter</a>
+                <a class="navbar-brand" href="index.html">{{.name}}</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Главная</a>
-                    </li>
-                    <li>
-                        <a href="profile_business.html">Мой профиль</a>
-                    </li>
-                    <li>
-                        <a href="register_business.html">Вход</a>
-                    </li>
-                </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a href="/">Главная</a>
+                  </li>
+                  <li>
+                      <a href="/business-profile">Мой профиль</a>
+                  </li>
+                  <li>
+                      <a href="/business-reg">Вход</a>
+                  </li>
+              </ul>
             </div>
         </div>
     </nav>
@@ -52,10 +53,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<<<<<<< HEAD
                     <div class="site-heading">
                         <h1>InvestStarter</h1>
                         <hr class="small">
                         <span class="subheading">Инвестиции малому бизнесу</span>
+=======
+                    <div class="page-heading">
+                        <h1>{{ .title }}</h1>
+>>>>>>> 7639a3c24a275e7e4eb6b4c2ea9c7a5800eb6dab
                     </div>
                 </div>
             </div>
@@ -101,3 +107,4 @@
 </body>
 
 </html>
+{{ end }}
