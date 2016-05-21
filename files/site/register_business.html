@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/">Главная</a>
+                        <a href="index.html">Главная</a>
                     </li>
                     <li>
-                        <a href="/business-profile">Мой профиль</a>
+                        <a href="profile_business.html">Мой профиль</a>
                     </li>
                     <li>
-                        <a href="/business-reg">Вход</a>
+                        <a href="register_business.html">Вход</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
                     <div class="site-heading">
                         <h1>{{ .name }}</h1>
                         <hr class="small">
-                        <span class="subheading">Деньги для малого бизнеса</span>
+                        <span class="subheading">Инвестиции малому бизнесу</span>
                     </div>
                 </div>
             </div>
@@ -58,8 +58,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Форма регистрации</p>
-                <form id="businessRegisterForm" action="/business-reg/check" method="post">	<!-- INSERT ACTION !!! -->
+                <p>Регистрация бизнеса</p>
+                <form id="businessRegisterForm" action="/business_reg/check">	<!-- INSERT ACTION !!! -->
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label style="font-family: 'Times New Roman', serif;">Наименование:</label>

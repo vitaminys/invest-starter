@@ -15,7 +15,6 @@ $( "#formVK" ).submit(function(event) {
 	$(".vkDAE").removeAttr("disabled");
   })
   .fail(function() {
-	alert("Fail");
     $("#loadVK").hide();
 	$(".vkDAE").removeAttr("disabled");
   });

@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/">Главная</a>
+                        <a href="index.html">Главная</a>
                     </li>
                     <li>
-                        <a href="/business-profile">Мой профиль</a>
+                        <a href="profile_business.html">Мой профиль</a>
                     </li>
                     <li>
-                        <a href="/business-reg">Вход</a>
+                        <a href="register_business.html">Вход</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
                     <div class="site-heading">
                         <h1>{{ .name }}</h1>
                         <hr class="small">
-                        <span class="subheading">Деньги для малого бизнеса</span>
+                        <span class="subheading">Инвестиции малому бизнесу</span>
                     </div>
                 </div>
             </div>
@@ -58,25 +58,80 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8-custom">
+				<hr class="firmSeparator">
                 <div class="post-preview">
-					<div class="firmName"></div>
-					<div class="firmRefs"></div>
-					<div class="firmDesc"></div>
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay1" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
 				</div>
-                <hr>
+                <hr class="firmSeparator">
                 <div class="post-preview">
-                    <a href="post.html">
-					   <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay2" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
+				</div><hr class="firmSeparator">
+                <div class="post-preview">
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay3" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
+				</div><hr class="firmSeparator">
+                <div class="post-preview">
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay4" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
 				</div>
-
-                <hr>
+				<hr class="firmSeparator">
+				<div class="post-preview">
+					<div class="firmLeft">
+						<img src="img/home-bg.jpg" alt="f_img" width="80%">
+					</div>
+					<div class="firmRight">
+						<div class="firmRightTop">
+							<h2 class="firmName post-title">Название фирмы</span>
+							<h3 class="firmDesc post-subtitle">Описание фирмы. <br> Его продолжение. <br> Город. <br> Прочие сведения</span>
+						</div>
+						<div class="firmRightBottom">
+							<h3 class="firmRefs post-subtitle"><form id="pay5" action="#"><button type="submit" class="btn btn-default">PAY</button></form></span>
+						</div>
+					</div>
+				</div>
+				<hr class="firmSeparator">
                 <!-- Pager -->
 				<!--
                 <ul class="pager">
@@ -94,6 +149,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/clean-blog.min.js"></script>
+	<script src="js/"
 </body>
+
 </html>
 {{ end }}
