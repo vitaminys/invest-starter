@@ -1,0 +1,153 @@
+{{ define "profile_business.html" }}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ .title }} | {{ .name }}</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/clean-template.css" rel="stylesheet">
+	<style type="text/css">
+		.firmData {
+			font-size: 80%;
+			font-face: Helvetica, sans-serif;
+			margin-bottom: 8px;
+			margin-top: 7px;
+		}
+		.row {
+			margin: 0;
+		}
+	</style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="index.html">InvestStarter</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Главная</a>
+                    </li>
+					<li>
+                        <a href="about.html">О проекте</a>
+                    </li>
+                    <li>
+                        <a href="profile_business.html">Мой профиль</a>
+                    </li>
+                    <li>
+                        <a href="register_business.html">Регистрация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<!-- Header -->
+    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>{{ .name }}</h1>
+                        <hr class="small">
+                        <span class="subheading">Инвестиции малому бизнесу</span>
+					</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+					<h2>Оплата</h2>
+					<form id="paymentForm" action="/" method="post">
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Сумма:</label>
+                            <input type="text" class="form-control" placeholder="Сумма" name="sum">
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Ваш номер QIWI кошелька (10 цифр):</label>
+                            <input type="text" class="form-control" placeholder="Номер QIWI кошелька" name="pho" maxlength="10">
+                        </div>
+                    </div>
+					<div class="row" style="margin-top: 5px; text-align: left;">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-default">Сформировать счёт</button>
+                        </div>
+                    </div>
+					</form>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
+	<script src="js/customAjaxHandlerPRF.js"></script>
+	<script>
+		function getUrlVars()
+		{
+			var vars = [], hash;
+			var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			for(var i = 0; i < hashes.length; i++)
+			{
+			hash = hashes[i].split('=');
+			vars.push(hash[1]);
+			}
+			return vars;
+		}
+		$( "#paymentForm" ).submit(function(event) {
+			event.preventDefault();
+			/*
+			var $form = $( this ),
+				sumI = $form.find( "input[name='sum']" ).val(),
+				phoI = $form.find( "input[name='pho']" ).val(),
+				firmID = getUrlVars()[0];
+			var today = new Date();
+			var dd = today.getDate()+1;
+			var mm = today.getMonth();
+			var yyyy = today.getFullYear();
+			var dateE = dd+'/'+mm+'/'+yyyy;
+			$.ajax({
+				requestType: 'PUT';
+				url: '/';
+				parameters: [
+					'user': ("+7" + phoI),
+					'amount': sumI,
+					'ccy': 'RUB',
+					'comment': 'InvestStarter',
+					'pay_source': 'qw',
+					'lifetime': today + 'c' + dateE,
+					'prv_name': 'QIWI'
+				]
+			});
+			$.post( url, { 'sum': 'sumI', 'pho': 'phoI', 'firm': 'firmID';});
+			*/
+			alert("Ваш запрос успешно отправлен.");
+			window.location = "index.html";
+		});
+	</script>
+</body>
+
+</html>
+{{ end }}
