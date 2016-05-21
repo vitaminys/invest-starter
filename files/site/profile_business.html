@@ -11,6 +11,15 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/clean-template.css" rel="stylesheet">
+	<style type="text/css">
+		.firmData {
+			font-size: 80%;
+			font-face: Helvetica, sans-serif;
+		}
+		#loadVK {
+			display: none;
+		}
+	</style>
 
 </head>
 
@@ -39,60 +48,54 @@
     </nav>
 
 	<!-- Header -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <header class="intro-header" style="background-image: url('img/about-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>InvestStarter</h1>
-                        <hr class="small">
-                        <span class="subheading">Деньги для малого бизнеса</span>
+                    <div class="page-heading">
+                        <h1>Мой профиль</h1>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- List -->
+    <!-- Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8-custom">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-					<div class="firmName"></div>
-					<div class="firmRefs"></div>
-					<div class="firmDesc"></div>
+					<h3>Ваши данные: </h3>
+					<ul>
+						<li class="firmData">Компания & co</li>
+						<li class="firmData">Общество с ограниченной ответственнойстью</li>
+						<li class="firmData">Москва г.</li>
+						<li class="firmData">Мясная промышленность</li>
+						<li class="firmData">Открытый в 2015 году <br> Колбасный цех.</li>
+					</ul>
 				</div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-					   <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+				<div class="post-preview">
+					<h3>Ваши проверки: </h3>
+					<form id="formVK" action="/business_reg/check">
+						<div class="row control-group">
+							<div class="form-group col-xs-12 floating-label-form-group controls" style="width: 50%;">
+								<input class="form-control vkDAE" placeholder="VK profile" name="idVK" style="float: left; font-size: 14pt;">
+							</div>
+							<img id="loadVK" src="./img/ajax-loader.gif">
+							<button type="submit" class="btn btn-default vkDAE" style="padding: 3px 5px;">&rarr;</button>
+						</div>
+					</form>
 				</div>
-				
-                <hr>
-                <!-- Pager -->
-				<!--
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-				-->
             </div>
         </div>
     </div>
-	
-	<hr>
-	
+
+    <hr>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/clean-blog.min.js"></script>
+	<script src="js/customAjaxHandlerPRF.js"></script>
 </body>
 
 </html>

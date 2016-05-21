@@ -210,9 +210,6 @@ hr.small {
     font-size: 30px;
   }
 }
-.post-preview li {
-	
-}
 .post-preview > a {
   color: #404040;
 }
@@ -252,10 +249,12 @@ hr.small {
   }
 }
 .firmCard {
-	
+	border: 1px solid #BC5D58;
+	border-collapse: collapse;
 }
-.firmCard * {
-	
+.firmCard td {
+	border: 1px solid #BC5D58;
+	border-collapse: collapse;
 }
 .section-heading {
   font-size: 36px;
