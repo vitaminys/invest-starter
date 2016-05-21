@@ -1,6 +1,6 @@
-<!--{{ define "register_business.html" }}-->
+{{ define "register_business.html" }}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 
@@ -21,18 +21,21 @@
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="index.html">{{ .title }}</a>
+                <a class="navbar-brand" href="index.html">InvestStarter</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="index.html">Главная</a>
                     </li>
+					<li>
+                        <a href="about.html">О проекте</a>
+                    </li>
                     <li>
                         <a href="profile_business.html">Мой профиль</a>
                     </li>
                     <li>
-                        <a href="/business-reg">Вход</a>
+                        <a href="register_business.html">Регистрация</a>
                     </li>
                 </ul>
             </div>
@@ -58,60 +61,51 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Форма регистрации</p>
+                <h2>Форма регистрации</h2>
                 <form id="businessRegisterForm" action="/business-reg/check" method="post">	<!-- INSERT ACTION !!! -->
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label style="font-family: 'Times New Roman', serif;">Наименование:</label>
-                            <input type="text" class="form-control" placeholder="Наименование" name="name">
-                            <p class="help-block text-danger"></p>
+                            <label style="font-family: 'Times New Roman', serif;">Название организации:</label>
+                            <input type="text" class="form-control" placeholder="Название организации" name="name">
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label style="font-family: 'Times New Roman', serif;">Тип:</label>
-                            <input type="text" class="form-control" placeholder="Тип" name="type">
-                            <p class="help-block text-danger"></p>
+                            <label style="font-family: 'Times New Roman', serif;">Форма деятельности:</label>
+                            <input type="text" class="form-control" placeholder="Форма деятельности" name="type">
                         </div>
                     </div>
 					<div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label style="font-family: 'Times New Roman', serif;">Город:</label>
-                            <input type="text" class="form-control" placeholder="Город" name="city">
-                            <p class="help-block text-danger"></p>
+                            <label style="font-family: 'Times New Roman', serif;">Адрес:</label>
+                            <input type="text" class="form-control" placeholder="Адрес" name="city">
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label style="font-family: 'Times New Roman', serif;">Род деятельности:</label>
                             <input type="text" class="form-control" placeholder="Род деятельности" name="industry">
-                            <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label style="font-family: 'Times New Roman', serif;">Описание:</label>
+                            <label style="font-family: 'Times New Roman', serif;">Описание (видно всем пользователям):</label>
                             <textarea class="form-control" placeholder="Описание" name="description"></textarea>
-                            <p class="help-block text-danger"></p>
                         </div>
                     </div>
 					<div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label style="font-family: 'Times New Roman', serif;">Email:</label>
-                            <input type="email" class="form-control" placeholder="Email" name="email">
-                            <p class="help-block text-danger"></p>
+                            <label style="font-family: 'Times New Roman', serif;">Адрес электронной почты:</label>
+                            <input type="email" class="form-control" placeholder="Адрес электронной почты" name="email">
                         </div>
                     </div>
 					<div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label style="font-family: 'Times New Roman', serif;">Пароль:</label>
                             <input type="password" class="form-control" placeholder="Пароль" name="passw">
-                            <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                    <br>
-                    <div id="success"></div>
-                    <div class="row">
+                    <div class="row" style="margin-top: 5px; text-align: left;">
                         <div class="form-group col-xs-12">
                             <button type="submit" class="btn btn-default">Отправить</button>
                         </div>
