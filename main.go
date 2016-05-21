@@ -33,6 +33,12 @@ func main() {
 // }
 
 func mpage(c *gin.Context) {
+	var res BusinessLight
+		db, err := bolt.Open("my.db", 0600, &bolt.Options{Timeout: 1 * time.Second})
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer db.Close()
 	c.HTML(http.StatusOK, "index.html", gin.H{
 		"title": "Главная страница",
 		"name":  siteName,

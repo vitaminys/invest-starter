@@ -22,6 +22,15 @@ type Business struct {
 	Password    string
 	Verified    bool
 }
+type BusinessLight struct {
+	Id          int
+	Name        string
+	Type        string
+	Industry    string
+	Description string
+	City        string
+	Verified    bool
+}
 
 type BusinessForm struct {
 	Name        string //`form:"name" binding:"required"`
@@ -44,7 +53,6 @@ func regbusiness(c *gin.Context) {
 	var form BusinessForm
 	bsn := Business{}
 	if c.Bind(&form) == nil {
-		log.Println("register_business")
 		db, err := bolt.Open("my.db", 0600, &bolt.Options{Timeout: 1 * time.Second})
 		if err != nil {
 			log.Fatal(err)
