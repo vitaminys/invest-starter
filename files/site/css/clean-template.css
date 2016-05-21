@@ -271,7 +271,6 @@ hr.small {
 	margin-bottom: 25px;
 }
 .post-preview {
-	height: 100%;
 	overflow: auto;
 }
 .post-preview > a {
