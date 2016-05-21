@@ -1,0 +1,101 @@
+<!--{{ define "register_business.html" }}-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .title }} | {{ .name }}</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/clean-template.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="index.html">InvestStarter</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Главная</a>
+                    </li>
+					<li>
+                        <a href="about.html">О проекте</a>
+                    </li>
+                    <li>
+                        <a href="profile_business.html">Мой профиль</a>
+                    </li>
+                    <li>
+                        <a href="register_business.html">Регистрация</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<!-- Header -->
+    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>{{ .name }}</h1>
+                        <hr class="small">
+                        <span class="subheading">Инвестиции малому бизнесу</span>
+					</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h1>Интернет-площадка, на которой предприниматели получат возможность брать кредит у любого человека</h1>
+					<h2>Команда</h2>
+					<p>Васенин Андрей, Лескин Иван, Палий Михаил</p>
+					<h2>Проблема</h2>
+					<p>Кредиты малым и средним бизнесам выдаются только под залог. В общем банки не желают выдавать кредиты малому и среднему. Особенно банки не дают кредит стартапам.</p>
+					<p>Годовые проценты по вкладам в банках меньше годового уровня инфляции.</p>
+					<p>Есть много желающих инвестировать свои деньги в бизнес и получать с них проценты.</p>
+					<p>Есть риск, что бизнесы быстро закроются, и не выплатят денег.</p>
+					<h2>Решение проблемы</h2>
+					<p>Мы создадим интернет-площадку, на которой начинающие бизнесы смогут взять нужную сумму на нужный им срок деньги у желающих проинвестировать в это дело.</p>
+					<p>На ней бизнесы смогут брать кредиты под не очень большие проценты (порядка 15-20%) с ежемесячной рассрочкой. Все эти ежемесячные платежи будут напрямую переводиться вкладчикам.</p>
+					<p>Вкладчики смогут выбрать в кого они хотят проинвестировать, и какую сумму они желают вложить.</p>
+					<p>Платформа будет проверять бизнесы через интернет, спрашивать бизнес-план, а также автоматически проверять информацию о предпринимателях в сети. Вкладчики сами будут решать на основе этой информации, готовы ли они вложиться. Договоры будут защищены блокчейном.</p>
+					<h2>Выгода</h2>
+					<p>Маржа от сделок = 0%. При первой регистрации на сайте фирма должна заплатить 10 000 рублей. Фирмы должны будут  также платить за их положение в списке. Также наша платформа может сама вкладывать деньги в бизнесы.</p>
+					<h2>Особенность</h2>
+					<p>Вкладчики могут вносить фиксированные суммы денег, например, по 3 000 рублей.</p>
+					<p>Тогда, например, при каждой выплате 17% переходят счёт вкладчику и 0% на счёт  интернет-площадки.</p>
+					<p>Максимальная сумма, на которую можно будет взять кредит, определяется степенью доверия, которую установит сайт.</p>
+					<h2>Целевая аудитория</h2>
+					<ul>
+						<li>Малые и средние бизнесы, которым не дали кредит в банке</li>
+						<li>Те, для кого условия банка неприемлемы</li>
+					</ul>
+					<p></p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
+</body>
+
+</html>
