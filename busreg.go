@@ -8,7 +8,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
-	"time"
+	// "reflect"
+	// "time"
 )
 
 type Business struct {
@@ -33,13 +34,13 @@ type BusinessLight struct {
 }
 
 type BusinessForm struct {
-	Name        string //`form:"name" binding:"required"`
-	Type        string //`form:"type" binding:"required"`
-	Industry    string //`form:"industry" binding:"required"`
-	Description string //`form:"description" binding:"required"`
-	City        string //`form:"city" binding:"required"`
-	Email       string //`form:"email" binding:"required"`
-	Password    string //`form:"password" binding:"required"`
+	Name        string `form:"name" binding:"required"`
+	Type        string `form:"type" binding:"required"`
+	Industry    string `form:"industry" binding:"required"`
+	Description string `form:"description" binding:"required"`
+	City        string `form:"city" binding:"required"`
+	Email       string `form:"email" binding:"required"`
+	Password    string `form:"password" binding:"required"`
 }
 
 func showbusregpage(c *gin.Context) {
@@ -50,49 +51,44 @@ func showbusregpage(c *gin.Context) {
 }
 
 func regbusiness(c *gin.Context) {
-	var form BusinessForm
-	bsn := Business{}
-	if c.Bind(&form) == nil {
-		db, err := bolt.Open("my.db", 0600, &bolt.Options{Timeout: 1 * time.Second})
-		if err != nil {
-			log.Fatal(err)
-		}
-		defer db.Close()
-		err = db.Batch(func(tx *bolt.Tx) error {
-			b, err := tx.CreateBucketIfNotExists([]byte("MyBucket"))
-			if err != nil {
-				return fmt.Errorf("create bucket: %s", err)
-			}
-			// b := tx.Bucket([]byte("business"))
-			id, err := b.NextSequence()
-			if err != nil {
-				log.Println(err)
-				bsn.Id = 0
-			} else {
-				bsn.Id = int(id)
-			}
-			buf, err := json.Marshal(bsn)
-			if err != nil {
-				return err
-			}
-			return b.Put(itob(bsn.Id), buf)
-		})
-
-		if err != nil {
-			log.Fatalln("Error in database while business registration")
-		}
-
-		// if form.User == "user" && form.Password == "password" {
-		// c.HTML(http.StatusOK, "index.html", gin.H{
-		// 	"title": "Успех. Верификация",
-		// })
-		// } else {
-		// 	c.HTML(http.StatusOK, "index.html", gin.H{
-		// 		"title": "Неуспех",
-		// 	})
-		// }
-		c.Redirect(http.StatusMovedPermanently, "/business-profile")
+	db, err := bolt.Open("my.db", 0600, nil)
+	if err != nil {
+		log.Fatal(err)
 	}
+	defer db.Close()
+	err = db.Batch(func(tx *bolt.Tx) error {
+		b, err := tx.CreateBucketIfNotExists([]byte("MyBucket"))
+		if err != nil {
+			return fmt.Errorf("create bucket: %s", err)
+		}
+		id, err := b.NextSequence()
+		k := 0;
+		if err != nil {
+			log.Println(err)
+			k = 0
+		} else {
+			k = int(id)
+		}
+		buf, err := json.Marshal(gin.H{
+			"Id" : k,
+			"Name" : c.PostForm("name"),
+			"Type" : c.PostForm("type"),
+			"Industry" : c.PostForm("industry"),
+			"Description" : c.PostForm("descr"),
+			"City": c.PostForm("city"),
+			"Email": c.PostForm("email"),
+			"Password": c.PostForm("passw"),
+			"Verified": false,
+		})
+		if err != nil {
+			return err
+		}
+		return b.Put(itob(k), buf)
+	})
+	if err != nil {
+		log.Fatalln("Error in database while business registration")
+	}
+	c.Redirect(http.StatusMovedPermanently, "/business-profile")
 }
 
 func busprofile(c *gin.Context) {

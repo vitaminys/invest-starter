@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>InvestStarter</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/clean-template.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="index.html">InvestStarter</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="profile_business.html">Мой профиль</a>
+                    </li>
+                    <li>
+                        <a href="register_business.html">Вход</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<!-- Header -->
+    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>InvestStarter</h1>
+                        <hr class="small">
+                        <span class="subheading">Инвестиции малому бизнесу</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Регистрация бизнеса</p>
+                <form id="businessRegisterForm" action="/business_reg/check">	<!-- INSERT ACTION !!! -->
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Наименование:</label>
+                            <input type="text" class="form-control" placeholder="Наименование" name="name">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Тип:</label>
+                            <input type="text" class="form-control" placeholder="Тип" name="type">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+					<div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Город:</label>
+                            <input type="text" class="form-control" placeholder="Город" name="city">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Род деятельности:</label>
+                            <input type="text" class="form-control" placeholder="Род деятельности" name="industry">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Описание:</label>
+                            <textarea class="form-control" placeholder="Описание" name="description"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+					<div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Email:</label>
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+					<div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label style="font-family: 'Times New Roman', serif;">Пароль:</label>
+                            <input type="password" class="form-control" placeholder="Пароль" name="passw">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-default">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+	
+    <hr>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
+	<script src="js/customAjaxHandlerREG.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<!--{{ define "register_business.html" }}-->
+{{ define "register_business.html" }}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,13 +53,13 @@
             </div>
         </div>
     </header>
-	
+
     <!-- Main Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p>Форма регистрации</p>
-                <form id="businessRegisterForm" action="/business-reg/check" method="post">	<!-- INSERT ACTION !!! -->
+                <form id="businessRegisterForm" method="post" action="/business-reg/check/">	<!-- INSERT ACTION !!! -->
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label style="font-family: 'Times New Roman', serif;">Наименование:</label>
@@ -121,12 +121,12 @@
         </div>
     </div>
     <hr>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/clean-blog.min.js"></script>
-	<script src="js/customAjaxHandlerREG.js"></script>
 </body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/clean-blog.min.js"></script>
+<script src="js/customAjaxHandlerREG.js"></script>
 
 </html>
 {{ end }}
