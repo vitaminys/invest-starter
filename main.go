@@ -42,5 +42,6 @@ func main() {
 func mpage(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.html", gin.H{
 		"title": "Главная страница",
+		"name": "InvestStarter",
 	})
 }
