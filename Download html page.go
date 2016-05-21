@@ -29,7 +29,7 @@ func ReturnSitesHTML(siteAdress string) string {
   }
 }
 
-func FindFoundationDate(sitesHTML string) time {
+func FindFoundationDate(sitesHTML string) time.Time {
   s := sitesHTML
   x := regexp.MustCompile("\"post-").FindStringIndex(s)[0] + 6
   pName := string(s[x+0]) + string(s[x+1]) + string(s[x+2]) + string(s[x+3]) + string(s[x+4]) + string(s[x+5]) + string(s[x+6]) + string(s[x+7]) + string(s[x+8])
@@ -37,13 +37,13 @@ func FindFoundationDate(sitesHTML string) time {
   if err != nil {
     fmt.Printf("%s", err)
     os.Exit(1)
-    return ""
+    return time.Now()
   } else {
     contents, err := ioutil.ReadAll(response.Body)
     if err != nil {
       fmt.Printf("%s", err)
       os.Exit(1)
-      return ""
+      return time.Now()
     }
     return FormDateInTimeType((regexp.MustCompile("[0-9]{1,2} [а-я]{3} [0-9]{4}").FindString(string(contents))))
   }
@@ -51,29 +51,40 @@ func FindFoundationDate(sitesHTML string) time {
 
 /*func main () {
   siteAdress := "http://vk.com/p2pworld"
-  file, err := os.Create("test.txt")
+  /*file, err := os.Create("test.txt")
   if err != nil {
     // handle the error here
     return
   }
-  defer file.Close()
-  file.WriteString((ReturnSitesHTML(siteAdress)))
+  defer file.Close()*/
+  //file.WriteString((ReturnSitesHTML(siteAdress)))
   fmt.Println(FindFoundationDate(ReturnSitesHTML(siteAdress)))
 }*/
 
-func FormDateInTimeType (date string) time {
+func FormDateInTimeType (date string) time.Time {
   return time.Date(FormYear(date), FormMonth(date), FormDay(date), 0, 0, 0, 0, time.UTC)
 }
 
-func FormYear(date string)  int{
-  return strconv.Itoa(regexp.MustCompile("[0-9]{4}").FindString(date))
+
+func FormYear(date string)  int {
+  x, err := strconv.Atoi(regexp.MustCompile("[0-9]{4}").FindString(date))
+  if (err != nil){
+    return 0
+  } else {
+    return x
+  }
 }
 
-func FormDay(date string)  int{
-  return strconv.Itoa(regexp.MustCompile("[0-9]{1,2}").FindString(date))
+func FormDay(date string)  int {
+  x, err := strconv.Atoi(regexp.MustCompile("[0-9]{1,2}").FindString(date))
+  if (err != nil){
+    return 0
+  } else {
+    return x
+  }
 }
 
-func FormMonth(date string)  int{
+func FormMonth(date string)  time.Month {
   s := regexp.MustCompile("[а-я]{3}").FindString(date)
   switch s {
   case "янв":
